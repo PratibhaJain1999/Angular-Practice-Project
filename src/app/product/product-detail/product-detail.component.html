@@ -1,0 +1,30 @@
+<!-- <p>product-detail works!</p> -->
+<div class="col-xs-12">
+<div class="row">
+    <img [src]="productDet.imagePath" style="max-height: 350px;">
+</div>
+<div class="row">
+    <h2>{{productDet.name}}</h2>
+</div>
+<div class="row">
+    <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" id="dropdwn" data-toggle="dropdown">Manage</button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#"> Shopping list</a>
+            <a  class="dropdown-item" href="#">Edit product</a>
+            <a  class="dropdown-item" href="#" (click)="deleteProduct()">Delete product</a>
+
+        </div>
+        </div>
+        </div>
+<div class="row">
+    <span>{{productDet.description}}</span>
+</div>
+<div class="row">
+    <ul class="list-group">
+    <li class="list-group-item">Conditioner-1</li>
+    <li class="list-group-item">Serum-1</li>
+    </ul>
+
+</div>
+</div>

@@ -1,0 +1,34 @@
+<!-- <p>header works!</p> -->
+<nav class="navbar navbar-expand navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand" (click)="displayTab('')" > Product Album</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar navbar-nav">
+                <li><a href="#" class="nav-link"  (click)="displayTab('product')" >Product</a></li>
+                <li><a href="#" class="nav-link" (click)="displayTab('shopping-list')">Shopping List</a></li>
+            </ul>
+
+        <ul class="nav navbar-nav ml-auto">
+            <li>
+                <a class="nav-link" href="#" (click)="displayTab('register')">Register/Login</a>
+            </li>
+           
+            <li>
+                <a class="nav-link" href="#">Logout</a>
+            </li>
+           
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Manage
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#" (click) = "saveData()">Save Data</a>
+                  <a class="dropdown-item" href="#" (click)="fetchData()">Fetch Data</a>
+                </div>
+              </div>
+        </ul>
+    </div>
+</div>
+</nav>

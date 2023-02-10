@@ -1,0 +1,43 @@
+<!-- <p>product-list works!</p> -->
+<!-- <app-product-item></app-product-item> -->
+<div class="row">
+    <div class="col-xs-12">
+        <button type="button" class="btn btn-primary" (click)="newProductAdd()">New Product</button>
+    </div>
+</div>
+<hr>
+
+    <div class="row">
+    <div class="col-xs-12">
+    <!-- <a href="#" class="list-group-item clearfix">
+        <div class="float-left" >
+            <h4 class="list-group-item-heading">MamaEarth Shampoo</h4>
+            <p class="list-group-item-text">Description</p>
+        </div>
+       <span class="float-right">
+        <img src="https://honasa-mamaearth-production.imgix.net/o/n/onion-hair-shampoo-250ml-with-ingredient_2.jpg?auto=format&fit=crop&w=332&auto=compress" class="img" style="max-height: 200px;">
+       </span>
+    </a>
+    <a href="#" class="list-group-item clearfix">
+        <div class="float-left">
+            <h4 class="list-group-item-heading">L'oreal Shampoo</h4>
+            <p class="list-group-item-text">Description</p>
+        </div>
+        <span class="float-right">
+            <img src="https://images-eu.ssl-images-amazon.com/images/I/31uOGjzyn4L._SX300_SY300_QL70_FMwebp_.jpg" class="img" style="max-height: 200px">
+        </span>
+    </a>
+    <a href="#" class="list-group-item clearfix">
+        <div class="float-left">
+            <h4 class="list0group-item-heading">Wow Shampoo</h4>
+            <p class="list-group-item-text">Description</p>
+        </div>
+        <span class="float-right">
+            <img src="https://rukminim1.flixcart.com/image/416/416/k3erngw0/shampoo/z/u/8/300-hard-water-defense-shampoo-300-ml-wow-skin-science-original-imafmjbgtvcen9nh.jpeg?q=70" class="img" style="max-height: 200px;">
+        </span>
+    </a> -->
+    <app-product-item *ngFor="let product of products" [productItem]="product" (productSelected)="productsSelection(product)"></app-product-item>
+
+    </div>
+</div>
+

@@ -1,0 +1,10 @@
+<!-- <p>shopping-list works!</p> -->
+<div class="container">
+    <app-shopping-list-edit (productAdd)="addData($event)" [productSelected]="products" (productChanges)="productChanges($event)" (deleteProduct)="deleteProduct($event)"></app-shopping-list-edit>
+<hr>
+<ul class="list-group">
+    <li *ngFor="let item of product , let i=index" class="list-group-item" (click)="productSelected(i)">{{item.name}}({{item.amount}})</li>
+
+</ul>
+
+</div>

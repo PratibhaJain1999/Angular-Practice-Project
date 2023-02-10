@@ -1,0 +1,32 @@
+<!-- <p>shopping-list-edit works!</p> -->
+<form (ngSubmit)="addProduct(form)" #form="ngForm">
+    <div class="row">
+<div class="form-group col-sm-5">
+    <label>Name</label>
+    <input type="text" 
+    class="form-control"
+     name="name"
+      id="name"
+        ngModel
+         required>
+</div>
+<div class="form-group col-sm-5">
+    <label>Amount</label>
+    <input type="number"
+     class="form-control" 
+     name="amount"
+      id="amount"
+        ngModel 
+        required 
+        pattern="^[0-9]*[1-9][0-9]*$">
+
+</div>
+    </div>
+    <div class="row">
+        <button type="submit" class="btn btn-primary" [disabled]="form.status=='INVALID'">{{editItem ? 'Update':'Add'}}</button>
+        <button type="button" class="btn btn-danger" (click)="deleteAll()" *ngIf="editItem">Delete</button>
+        <button type="button" class="btn btn-info" (click)="clearAll()">Clear</button>
+
+        
+    </div>
+</form>

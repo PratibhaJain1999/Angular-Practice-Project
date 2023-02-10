@@ -1,0 +1,7 @@
+<app-header (selectTab)="navigateTab($event)"></app-header>
+<app-product *ngIf="navTabSelection=='product'"></app-product>
+<app-shopping-list *ngIf="navTabSelection=='shopping-list'"></app-shopping-list>
+<h2 *ngIf="navTabSelection==''" class="head">Welcome to Product Album.Visit our website to know more about products.</h2>
+<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/shampoo-1585065162.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*" class ="img shadow-lg" *ngIf="navTabSelection==''">
+<app-authenticate *ngIf="navTabSelection=='register'"></app-authenticate>
+

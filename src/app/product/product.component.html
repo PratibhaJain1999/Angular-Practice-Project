@@ -1,0 +1,13 @@
+<!-- <p>product works!</p> -->
+<div class="container">
+<div class="row">
+<div class="col-md-5">
+    <app-product-list (onProductSelected)="productSelected($event)" (newProductBtn)="newProductBtn($event)"[productAdded]="productAdded" [deleteProduct]="deleteProduct"></app-product-list>
+    </div>
+<div class="col-md-7">
+    <app-product-detail *ngIf="selectedProduct" [productDet]="selectedProduct" (productToBeDeleted)="productDelete($event)"></app-product-detail>
+    <h4 *ngIf="!selectedProduct && !newProduct">Please select a product.</h4>
+    <app-new-product *ngIf="newProduct" (onNewProduct)="productAdd($event)"></app-new-product>
+</div>
+</div>
+</div>

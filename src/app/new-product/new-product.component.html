@@ -1,0 +1,31 @@
+<!-- <p>new-product works!</p> -->
+<div class="container">
+    
+    <form #newForm="ngForm" (ngSubmit)="saveProduct(newForm)">
+       <button type="submit" class="btn btn-success" id="save" [disabled]="newForm.status=='INVALID'">Add</button>
+   <button type="button" class="btn btn-danger ml-3 "id="clear" (click)="clearAll()">Clear</button><br>
+       <div class="form-group">
+           <label for="name">Name</label>
+       <input type="text" class="form-control ml-1 w-100" required class="form-control" id="name" name="name"ngModel #name="ngModel" placeholder="Enter name here..!!">
+       <span class="blocks" *ngIf="name.status =='INVALID' && name.touched"> Please enter a correct Name.</span>
+
+       </div>
+     
+     <div class="form-group">
+       <label for="name">Description</label>
+       <textarea id="description" name="description" rows="10" cols="56" class="form-control"  required ngModel #description="ngModel" placeholder="Enter description here..!!"></textarea> 
+       <span class="blocks" *ngIf="description.status =='INVALID' && description.touched"> Please enter a correct Description.</span>
+
+    </div>
+       <div class="form-group">
+        <label for="image">Image</label>
+        <input type="text" class="form-control ml-1 w-100" required class="form-control" id="image" name="image" ngModel #image="ngModel" placeholder="Enter image here..!!">
+        <span class="blocks" *ngIf="image.status =='INVALID' && image.touched"> Please enter a correct Image.</span>
+
+       <hr>
+    </div>
+
+       <button type="button" class="btn btn-success">Add Ingredients</button>
+    </form>
+   
+   </div>

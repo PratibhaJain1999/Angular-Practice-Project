@@ -1,0 +1,10 @@
+<!-- <p>product-item works!</p> -->
+<a  href="#" class="list-group-item clearfix" (click)="onProductSelected()">
+    <div class="float-left">
+        <h3 class="list-group-item-heading">{{productItem.name}}</h3>
+        <p class="list-group-item-text">{{productItem.description}}</p>
+        </div>
+        <span class="float-right">
+            <img src="{{productItem.imagePath}}" style="max-height: 100px;">
+        </span>
+</a>
